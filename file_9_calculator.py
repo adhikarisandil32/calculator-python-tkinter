@@ -54,10 +54,10 @@ def evaluate():
     if current_operand is None:
         return
 
-    if current_operand == 0 and operator == "/":
+    try:
+        return eval(previous_operand+current_operand)
+    except:
         return "Error"
-
-    return eval(previous_operand+current_operand)
 
 
 def final_evaluation():
@@ -114,6 +114,7 @@ def operation(operator_type):
     current_operand = None
 
     update_screen()
+
 
 def clear_all():
     global current_operand, previous_operand, operator
