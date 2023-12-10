@@ -70,7 +70,6 @@ def final_evaluation():
     previous_operand = None
 
     update_screen()
-    current_operand = None
 
 
 def change_plus_minus_sign():
